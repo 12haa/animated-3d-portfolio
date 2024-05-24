@@ -1,0 +1,402 @@
+
+  ============================================================================  
+
+    ja-netfilter 2022.2.0
+
+    A javaagent framework :)
+
+    https://github.com/ja-netfilter/ja-netfilter
+
+  ============================================================================  
+
+2024-05-20 21:12:04,668 [     88]   WARN - #c.i.i.p.PluginManager - <resource-bundle>com.jetbrains.webstorm.WebstormBundle</resource-bundle> tag is found in an xml descriptor included into the platform part of the IDE but the platform part uses predefined bundles (e.g. ActionsBundle for actions) anyway; this tag must be replaced by a corresponding attribute in some inner tags (e.g. by 'resource-bundle' attribute in 'actions' tag)
+2024-05-20 21:12:06,639 [   2059]   WARN - #c.i.s.ComponentManagerImpl - `preload=true` must be used only for core services (service=com.jetbrains.rdserver.statistics.BackendStatisticsManager, plugin=com.jetbrains.codeWithMe)
+2024-05-20 21:12:06,643 [   2063]   WARN - #c.i.s.ComponentManagerImpl - com.tabnine.general.GettingStartedManager initializer requests com.tabnine.general.BrowserUtilsService instance
+2024-05-20 21:12:06,843 [   2263]   WARN - #c.i.s.ComponentManagerImpl - com.tabnineCommon.general.StaticConfig initializer requests com.intellij.ide.plugins.PluginUtil instance
+2024-05-20 21:12:07,535 [   2955] SEVERE - #c.i.o.e.c.i.EditorColorsManagerImpl - id is not specified for extension /visual_studio_code_dark_plus
+java.lang.Throwable: id is not specified for extension /visual_studio_code_dark_plus
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:376)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImplKt$createLoadBundledSchemeRequests$1$1.getSchemeKey(EditorColorsManagerImpl.kt:733)
+	at com.intellij.configurationStore.schemeManager.SchemeManagerImpl.loadBundledSchemes(SchemeManagerImpl.kt:128)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImpl.<init>(EditorColorsManagerImpl.kt:103)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImpl.<init>(EditorColorsManagerImpl.kt:90)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt$instantiate$4.invoke(instantiate.kt:74)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt$instantiate$4.invoke(instantiate.kt:72)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:278)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:72)
+	at com.intellij.serviceContainer.InstantiateKt.instantiateWithContainer(instantiate.kt:19)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance$suspendImpl(ServiceInstanceInitializer.kt:26)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance(ServiceInstanceInitializer.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invokeSuspend(LazyInstanceHolder.kt:162)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invokeSuspend(LazyInstanceHolder.kt:160)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.initialize(LazyInstanceHolder.kt:145)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.access$initialize(LazyInstanceHolder.kt:13)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.tryInitialize(LazyInstanceHolder.kt:135)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt:95)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance$suspendImpl(LazyInstanceHolder.kt:83)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.InstanceContainerImpl.instance(InstanceContainerImpl.kt:67)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getServiceAsync(ComponentManagerImpl.kt:993)
+	at com.intellij.ide.ui.html.GlobalStyleSheetHolderKt$initGlobalStyleSheet$2$1.invokeSuspend(GlobalStyleSheetHolder.kt:129)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:07,594 [   3014] SEVERE - #c.i.o.e.c.i.EditorColorsManagerImpl - WebStorm 2023.3.2  Build #WS-233.13135.92
+2024-05-20 21:12:07,594 [   3014] SEVERE - #c.i.o.e.c.i.EditorColorsManagerImpl - JDK: 17.0.9; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2024-05-20 21:12:07,595 [   3015] SEVERE - #c.i.o.e.c.i.EditorColorsManagerImpl - OS: Windows 11
+2024-05-20 21:12:07,596 [   3016] SEVERE - #c.i.o.e.c.i.EditorColorsManagerImpl - Last Action: 
+2024-05-20 21:12:07,760 [   3180]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Darcula - old: Gerry Darcula, new Gerry Darcula
+2024-05-20 21:12:07,763 [   3183]   WARN - #c.i.s.ComponentManagerImpl - com.intellij.lang.javascript.psi.jsdoc.impl.JSDocCustomTags initializer requests com.intellij.lang.javascript.JSDisposable instance
+2024-05-20 21:12:07,768 [   3188]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Dark - old: Gerry Dark, new Gerry Dark
+2024-05-20 21:12:07,786 [   3206]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Violet - old: Gerry Violet, new Gerry Violet
+2024-05-20 21:12:07,797 [   3217]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Light - old: Gerry Light, new Gerry Light
+2024-05-20 21:12:07,834 [   3254]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Storm - old: Gerry Storm, new Gerry Storm
+2024-05-20 21:12:07,853 [   3273]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Gerry Oceanic - old: Gerry Oceanic, new Gerry Oceanic
+2024-05-20 21:12:07,856 [   3276]   WARN - #c.i.i.u.UITheme - unsupported length:base1
+java.lang.IllegalArgumentException: unsupported length:base1
+	at com.intellij.ui.ColorHexUtil.fromHex(ColorHexUtil.java:13)
+	at com.intellij.ide.ui.UiThemeParserKt.parseBorder(uiThemeParser.kt:89)
+	at com.intellij.ide.ui.UiThemeParserKt.parseStringValue(uiThemeParser.kt:165)
+	at com.intellij.ide.ui.UIThemeBeanKt$readFlatMapFromJson$1.invoke(UIThemeBean.kt:192)
+	at com.intellij.ide.ui.UIThemeBeanKt$readFlatMapFromJson$1.invoke(UIThemeBean.kt:192)
+	at com.intellij.ide.ui.UIThemeBeanKt.putEntry(UIThemeBean.kt:342)
+	at com.intellij.ide.ui.UIThemeBeanKt.readFlatMapFromJson(UIThemeBean.kt:192)
+	at com.intellij.ide.ui.UIThemeBeanKt.readTheme(UIThemeBean.kt:86)
+	at com.intellij.ide.ui.UITheme$Companion.loadFromJson$intellij_platform_ide_impl(UITheme.kt:220)
+	at com.intellij.ide.ui.UITheme$Companion.loadFromJson$intellij_platform_ide_impl$default(UITheme.kt:212)
+	at com.intellij.ide.ui.UIThemeProvider.createTheme$intellij_platform_ide_impl(UIThemeProvider.kt:85)
+	at com.intellij.ide.ui.laf.UiThemeProviderListManager$1$1$supplier$1.invoke(UiThemeProviderListManager.kt:51)
+	at com.intellij.ide.ui.laf.UiThemeProviderListManager$1$1$supplier$1.invoke(UiThemeProviderListManager.kt:36)
+	at com.intellij.util.concurrency.SynchronizedClearableLazy._get_value_$lambda$1$lambda$0(SynchronizedClearableLazy.kt:41)
+	at java.base/java.util.concurrent.atomic.AtomicReference.updateAndGet(AtomicReference.java:210)
+	at com.intellij.util.concurrency.SynchronizedClearableLazy.getValue(SynchronizedClearableLazy.kt:40)
+	at com.intellij.util.concurrency.SynchronizedClearableLazy.get(SynchronizedClearableLazy.kt:28)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImplKt$createLoadBundledSchemeRequests$1.invokeSuspend(EditorColorsManagerImpl.kt:768)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlin.sequences.SequenceBuilderIterator.hasNext(SequenceBuilder.kt:129)
+	at com.intellij.configurationStore.schemeManager.SchemeManagerImpl.loadBundledSchemes(SchemeManagerImpl.kt:126)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImpl.<init>(EditorColorsManagerImpl.kt:103)
+	at com.intellij.openapi.editor.colors.impl.EditorColorsManagerImpl.<init>(EditorColorsManagerImpl.kt:90)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt$instantiate$4.invoke(instantiate.kt:74)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt$instantiate$4.invoke(instantiate.kt:72)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:278)
+	at com.intellij.platform.instanceContainer.instantiation.InstantiateKt.instantiate(instantiate.kt:72)
+	at com.intellij.serviceContainer.InstantiateKt.instantiateWithContainer(instantiate.kt:19)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance$suspendImpl(ServiceInstanceInitializer.kt:26)
+	at com.intellij.serviceContainer.ServiceInstanceInitializer.createInstance(ServiceInstanceInitializer.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invokeSuspend(LazyInstanceHolder.kt:162)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invokeSuspend(LazyInstanceHolder.kt:160)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder$initialize$1.invoke(LazyInstanceHolder.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.initialize(LazyInstanceHolder.kt:145)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.access$initialize(LazyInstanceHolder.kt:13)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.tryInitialize(LazyInstanceHolder.kt:135)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt:95)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance$suspendImpl(LazyInstanceHolder.kt:83)
+	at com.intellij.platform.instanceContainer.internal.LazyInstanceHolder.getInstance(LazyInstanceHolder.kt)
+	at com.intellij.platform.instanceContainer.internal.InstanceContainerImpl.instance(InstanceContainerImpl.kt:67)
+	at com.intellij.serviceContainer.ComponentManagerImpl.getServiceAsync(ComponentManagerImpl.kt:993)
+	at com.intellij.ide.ui.html.GlobalStyleSheetHolderKt$initGlobalStyleSheet$2$1.invokeSuspend(GlobalStyleSheetHolder.kt:129)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:07,875 [   3295]   WARN - #c.i.i.u.UiThemePaletteScopeManager - No color scope defined for key: xActions.WelcomeScreen
+2024-05-20 21:12:07,883 [   3303]   WARN - #c.i.i.u.UIThemeBean - Do not set theme id in JSON (value=f92a0fa7-1a98-47cd-b5cb-78ff67e6f4f3)
+2024-05-20 21:12:07,893 [   3313]   WARN - #c.i.i.u.UIThemeBean - Do not set theme id in JSON (value=1a92aa6f-c2f1-4994-ae01-6a78e43eeb24)
+2024-05-20 21:12:07,901 [   3321]   WARN - #c.i.i.u.UIThemeBean - Do not set theme id in JSON (value=4b6007f7-b596-4ee2-96f9-968d3d3eb392)
+2024-05-20 21:12:07,907 [   3327]   WARN - #c.i.i.u.UIThemeBean - Do not set theme id in JSON (value=4f556d32-83cb-4b8b-9932-c4eccc4ce3af)
+2024-05-20 21:12:07,952 [   3372]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Atom One Dark - old: Atom One Dark, new Atom One Dark
+2024-05-20 21:12:07,960 [   3380]   WARN - #c.i.i.u.UIThemeBean - Do not set theme id in JSON (value=4b6007f7-b596-4ee2-96f9-968d3d3eb392)
+2024-05-20 21:12:07,965 [   3385]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme GitHub Dark Dimmed - old: GitHub Dark Dimmed, new GitHub Dark Dimmed
+2024-05-20 21:12:07,967 [   3387]   WARN - #c.i.c.ComponentStoreImpl - Duplicated scheme Visual Studio Code Dark Plus - old: Visual Studio Code Dark Plus, new Visual Studio Code Dark Plus
+2024-05-20 21:12:08,207 [   3627]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Celestial' because its parent scheme 'Celestial' is missing.
+2024-05-20 21:12:08,207 [   3627]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Dark purple' because its parent scheme 'Dark purple' is missing.
+2024-05-20 21:12:08,207 [   3627]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Dracula Colorful' because its parent scheme 'Dracula Colorful' is missing.
+2024-05-20 21:12:08,208 [   3628]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Dracula' because its parent scheme 'Dracula' is missing.
+2024-05-20 21:12:08,208 [   3628]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Glowing Darcula' because its parent scheme 'Glowing Darcula' is missing.
+2024-05-20 21:12:08,209 [   3629]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Godot Theme' because its parent scheme 'Godot Theme' is missing.
+2024-05-20 21:12:08,209 [   3629]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Hard Hacker Darker' because its parent scheme 'Hard Hacker Darker' is missing.
+2024-05-20 21:12:08,209 [   3629]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Hiberbee Dark' because its parent scheme 'Hiberbee Dark' is missing.
+2024-05-20 21:12:08,210 [   3630]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monocai' because its parent scheme 'Monocai' is missing.
+2024-05-20 21:12:08,210 [   3630]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro - No Italics' because its parent scheme 'Monokai Pro - No Italics' is missing.
+2024-05-20 21:12:08,210 [   3630]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Classic)' because its parent scheme 'Monokai Pro (Classic)' is missing.
+2024-05-20 21:12:08,210 [   3630]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Machine) - No Italics' because its parent scheme 'Monokai Pro (Filter Machine) - No Italics' is missing.
+2024-05-20 21:12:08,211 [   3631]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Machine)' because its parent scheme 'Monokai Pro (Filter Machine)' is missing.
+2024-05-20 21:12:08,211 [   3631]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Octagon) - No Italics' because its parent scheme 'Monokai Pro (Filter Octagon) - No Italics' is missing.
+2024-05-20 21:12:08,211 [   3631]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Octagon)' because its parent scheme 'Monokai Pro (Filter Octagon)' is missing.
+2024-05-20 21:12:08,211 [   3631]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Ristretto) - No Italics' because its parent scheme 'Monokai Pro (Filter Ristretto) - No Italics' is missing.
+2024-05-20 21:12:08,212 [   3632]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Ristretto)' because its parent scheme 'Monokai Pro (Filter Ristretto)' is missing.
+2024-05-20 21:12:08,212 [   3632]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Spectrum) - No Italics' because its parent scheme 'Monokai Pro (Filter Spectrum) - No Italics' is missing.
+2024-05-20 21:12:08,212 [   3632]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro (Filter Spectrum)' because its parent scheme 'Monokai Pro (Filter Spectrum)' is missing.
+2024-05-20 21:12:08,212 [   3632]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Monokai Pro' because its parent scheme 'Monokai Pro' is missing.
+2024-05-20 21:12:08,213 [   3633]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Neo Night' because its parent scheme 'Neo Night' is missing.
+2024-05-20 21:12:08,213 [   3633]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_New Dark' because its parent scheme 'New Dark' is missing.
+2024-05-20 21:12:08,213 [   3633]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Obsidiansunset-color-theme' because its parent scheme 'Obsidiansunset-color-theme' is missing.
+2024-05-20 21:12:08,214 [   3634]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_one-dark-native' because its parent scheme 'one-dark-native' is missing.
+2024-05-20 21:12:08,214 [   3634]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Trash Panda Theme (High Contrast)' because its parent scheme 'Trash Panda Theme (High Contrast)' is missing.
+2024-05-20 21:12:08,214 [   3634]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Trash Panda Theme (Moonlight)' because its parent scheme 'Trash Panda Theme (Moonlight)' is missing.
+2024-05-20 21:12:08,214 [   3634]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_Trash Panda Theme' because its parent scheme 'Trash Panda Theme' is missing.
+2024-05-20 21:12:08,215 [   3635]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_VSCode Dark Brighter' because its parent scheme 'VSCode Dark Brighter' is missing.
+2024-05-20 21:12:08,215 [   3635]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_VSCode Dark' because its parent scheme 'VSCode Dark' is missing.
+2024-05-20 21:12:08,215 [   3635]   WARN - #c.i.o.e.c.i.EditorColorsManagerImpl - Skipping '_@user_vuesion-theme' because its parent scheme 'vuesion-theme' is missing.
+2024-05-20 21:12:09,961 [   5381]   WARN - #c.i.s.ComponentManagerImpl - com.intellij.psi.LanguageSubstitutors initializer requests com.intellij.psi.LanguageSubstitutors instance
+2024-05-20 21:12:10,009 [   5429]   WARN - #c.i.s.ComponentManagerImpl - org.zmlx.hg4idea.provider.HgChangeProvider initializer requests com.intellij.openapi.vcs.FileStatusFactory instance
+2024-05-20 21:12:10,157 [   5577]   WARN - #com.tabnine.statusBar.TabnineStatusBarWidget - Failed to update the status bar
+2024-05-20 21:12:12,811 [   8231]   WARN - #c.i.o.v.n.p.d.e.DurableEnumeratorFactory - [enumerator.mmapped]: .valueToId map is out-of-sync with .valuesLog data -> rebuilding it
+2024-05-20 21:12:13,746 [   9166]   WARN - #c.i.o.a.i.ActionUpdater - 871 ms to grab EDT for FontEditorPreview$RestorePreviewTextAction#Update@ContextToolbar (com.intellij.application.options.colors.FontEditorPreview$RestorePreviewTextAction)
+2024-05-20 21:12:13,746 [   9166]   WARN - #c.i.o.a.i.ActionUpdater - 873 ms to grab EDT for FontEditorPreview$ToggleBoldFontAction#Update@ContextToolbar (com.intellij.application.options.colors.FontEditorPreview$ToggleBoldFontAction)
+2024-05-20 21:12:14,558 [   9978]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - com.intellij.lang.typescript.compiler.languageService.protocol.TypeScriptServiceStandardOutputProtocol Expected json answer: Content-Length: 76
+
+2024-05-20 21:12:14,558 [   9978]   WARN - #c.i.l.j.s.JSLanguageServiceQueue - com.intellij.lang.typescript.compiler.languageService.protocol.TypeScriptServiceStandardOutputProtocol Expected json answer: 
+
+window.cefQuery_1832283164_1({request: '' + link,onSuccess: function(response) {},onFailure: function(error_code, error_message) {}});
+2024-05-20 21:12:14,850 [  10270]   WARN - #c.i.i.s.i.StartupManagerImpl - Migrate com.tabnine.Initializer to ProjectActivity [Plugin: com.tabnine.TabNine]
+com.intellij.diagnostic.PluginException: Migrate com.tabnine.Initializer to ProjectActivity [Plugin: com.tabnine.TabNine]
+	at com.intellij.ide.startup.impl.StartupManagerImpl.runPostStartupActivities(StartupManagerImpl.kt:277)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.access$runPostStartupActivities(StartupManagerImpl.kt:69)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invokeSuspend(StartupManagerImpl.kt:192)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3.invokeSuspend(StartupManagerImpl.kt:191)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:15,099 [  10519]   WARN - #c.i.i.s.i.StartupManagerImpl - Migrate ?? to ProjectActivity [Plugin: izhangzhihao.rainbow.brackets]
+com.intellij.diagnostic.PluginException: Migrate ?? to ProjectActivity [Plugin: izhangzhihao.rainbow.brackets]
+	at com.intellij.ide.startup.impl.StartupManagerImpl.runPostStartupActivities(StartupManagerImpl.kt:277)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.access$runPostStartupActivities(StartupManagerImpl.kt:69)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invokeSuspend(StartupManagerImpl.kt:192)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3.invokeSuspend(StartupManagerImpl.kt:191)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:15,131 [  10551]   WARN - #c.i.i.s.p.i.BundledSharedIndexPostStartupActivity - Skipped 1 pre-built shared indexes: bundled-js-predefined-1d06a55b98c1-c44b541a36ca-JavaScript-WS-233.13135.92
+2024-05-20 21:12:15,140 [  10560]   WARN - #c.i.i.s.i.StartupManagerImpl - Migrate ?? to ProjectActivity [Plugin: izhangzhihao.rainbow.brackets]
+com.intellij.diagnostic.PluginException: Migrate ?? to ProjectActivity [Plugin: izhangzhihao.rainbow.brackets]
+	at com.intellij.ide.startup.impl.StartupManagerImpl.runPostStartupActivities(StartupManagerImpl.kt:277)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.access$runPostStartupActivities(StartupManagerImpl.kt:69)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invokeSuspend(StartupManagerImpl.kt:192)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3$2.invoke(StartupManagerImpl.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runPostStartupActivities$3.invokeSuspend(StartupManagerImpl.kt:191)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:15,971 [  11391]   WARN - org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint - Unsupported notification method: @/tailwindCSS/projectInitialized
+2024-05-20 21:12:17,803 [  13223]   WARN - #com.sourcegraph.cody.agent.CodyAgentClient - Cody by Sourcegraph: ? VSCodeSecretStorage:getAccessToken: failed 
+2024-05-20 21:12:24,440 [  19860]   WARN - #c.i.d.PerformanceWatcherImpl - UI was frozen for 10167ms, details saved to C:\Users\12haa\AppData\Local\JetBrains\WebStorm2023.3\log\threadDumps-freeze-20240520-211219-WS-233.13135.92-Unsafe.park-10sec
+2024-05-20 21:12:26,673 [  22093]   WARN - #o.j.p.t.TextMateService - Cannot find referenced file `./language-configuration.json` in bundle `E:\WebStorm\WebStorm 2023.3.2\plugins\textmate\lib\bundles\mdx`
+2024-05-20 21:12:27,095 [  22515]   WARN - #c.i.o.a.i.ActionUpdater - 604 ms to grab EDT for ToolWindowHeader$2#GetChildren@ToolwindowTitle (com.intellij.toolWindow.ToolWindowHeader$2)
+2024-05-20 21:12:28,294 [  23714]   WARN - #c.i.u.x.Binding - no accessors for co.fitten.llmintellij.TokenizerConfig
+2024-05-20 21:12:30,509 [  25929]   WARN - #c.i.s.ComponentManagerImpl - com.intellij.tailwind.TailwindElementDescriptorProvider initializer requests com.intellij.psi.css.impl.util.scheme.CssElementDescriptorFactory2 instance
+2024-05-20 21:12:42,263 [  37683]   WARN - #c.i.p.m.VulnerabilitiesRepositoryServer - Failed to check dependencies on server: https://vulnerability-search.europe-north1-gke.intellij.net
+2024-05-20 21:12:49,600 [  45020]   WARN - #com.sourcegraph.cody.agent.CodyAgentClient - window.showErrorMessage: Sign in to Cody to get started
+2024-05-20 21:12:49,601 [  45021]   WARN - #com.sourcegraph.cody.agent.CodyAgentClient - Cody by Sourcegraph: ? VSCodeSecretStorage:getAccessToken: failed 
+2024-05-20 21:12:52,010 [  47430]   WARN - #c.i.u.x.Binding - no accessors for java.time.LocalDateTime
+2024-05-20 21:12:52,467 [  47887]   WARN - #c.i.p.m.VulnerabilitiesRepositoryServer - Failed to check dependencies on server: https://vulnerability-search.europe-north1-gke.intellij.net
+2024-05-20 21:12:59,529 [  54949] SEVERE - #c.i.o.a.i.CoroutineExceptionHandlerImpl - Unhandled exception in [CoroutineName(com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl), StandaloneCoroutine{Cancelling}@2f962ce3, Dispatchers.IO]
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:467)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:589)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.followRedirect0(HttpURLConnection.java:2922)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.followRedirect(HttpURLConnection.java:2831)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1927)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at com.intellij.util.io.HttpRequests.openConnection(HttpRequests.java:619)
+	at com.intellij.util.io.HttpRequests$RequestImpl.getConnection(HttpRequests.java:361)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile$lambda$8(MarketplaceRequests.kt:185)
+	at com.intellij.util.io.HttpRequests.doProcess(HttpRequests.java:524)
+	at com.intellij.util.io.HttpRequests.process(HttpRequests.java:506)
+	at com.intellij.util.io.HttpRequests$RequestBuilderImpl.connect(HttpRequests.java:335)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile(MarketplaceRequests.kt:182)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadPluginDescriptor$intellij_platform_ide_impl(MarketplaceRequests.kt:148)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadLastCompatiblePluginDescriptors(MarketplaceRequests.kt:100)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadLastCompatiblePluginDescriptors$default(MarketplaceRequests.kt:94)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl.fetchPluginSuggestions(PluginAdvertiserService.kt:335)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl.access$fetchPluginSuggestions(PluginAdvertiserService.kt:120)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl$run$2.invokeSuspend(PluginAdvertiserService.kt:151)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:12:59,532 [  54952] SEVERE - #c.i.o.a.i.CoroutineExceptionHandlerImpl - WebStorm 2023.3.2  Build #WS-233.13135.92
+2024-05-20 21:12:59,532 [  54952] SEVERE - #c.i.o.a.i.CoroutineExceptionHandlerImpl - JDK: 17.0.9; VM: OpenJDK 64-Bit Server VM; Vendor: JetBrains s.r.o.
+2024-05-20 21:12:59,532 [  54952] SEVERE - #c.i.o.a.i.CoroutineExceptionHandlerImpl - OS: Windows 11
+2024-05-20 21:12:59,533 [  54953] SEVERE - #c.i.o.a.i.CoroutineExceptionHandlerImpl - Last Action: Terminal.NewTab
+Exception in thread "DefaultDispatcher-worker-61" java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:467)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:589)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.followRedirect0(HttpURLConnection.java:2922)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.followRedirect(HttpURLConnection.java:2831)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1927)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+	at com.intellij.util.io.HttpRequests.openConnection(HttpRequests.java:619)
+	at com.intellij.util.io.HttpRequests$RequestImpl.getConnection(HttpRequests.java:361)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile$lambda$8(MarketplaceRequests.kt:185)
+	at com.intellij.util.io.HttpRequests.doProcess(HttpRequests.java:524)
+	at com.intellij.util.io.HttpRequests.process(HttpRequests.java:506)
+	at com.intellij.util.io.HttpRequests$RequestBuilderImpl.connect(HttpRequests.java:335)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile(MarketplaceRequests.kt:182)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadPluginDescriptor$intellij_platform_ide_impl(MarketplaceRequests.kt:148)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadLastCompatiblePluginDescriptors(MarketplaceRequests.kt:100)
+	at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.loadLastCompatiblePluginDescriptors$default(MarketplaceRequests.kt:94)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl.fetchPluginSuggestions(PluginAdvertiserService.kt:335)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl.access$fetchPluginSuggestions(PluginAdvertiserService.kt:120)
+	at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl$run$2.invokeSuspend(PluginAdvertiserService.kt:151)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+	Suppressed: kotlinx.coroutines.internal.DiagnosticCoroutineContextException: [CoroutineName(com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.PluginAdvertiserServiceImpl), StandaloneCoroutine{Cancelling}@2f962ce3, Dispatchers.IO]
+2024-05-20 21:13:02,870 [  58290]   WARN - #c.i.p.m.VulnerabilitiesRepositoryServer - Failed to check dependencies on server: https://vulnerability-search.europe-north1-gke.intellij.net
+2024-05-20 21:13:03,471 [  58891]   WARN - #c.i.p.m.VulnerabilitiesRepositoryServer - com.intellij.packageChecker.model.VulnerabilitiesRepositoryServer.getVulnerabilitiesFromServer(VulnerabilitiesRepositoryServer.kt:139)
+com.intellij.packageChecker.model.VulnerabilitiesRepositoryServer.access$getVulnerabilitiesFromServer(VulnerabilitiesRepositoryServer.kt:34)
+com.intellij.packageChecker.model.VulnerabilitiesRepositoryServer$getVulnerabilitiesFromServer$1.invokeSuspend(VulnerabilitiesRepositoryServer.kt)
+kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+2024-05-20 21:13:06,624 [  62044]   WARN - #c.i.u.x.Binding - no accessors for com.intellij.ide.util.TipsUsageManager$State
+2024-05-20 21:13:24,936 [  80356]   WARN - #c.i.i.shutdown - Project Project(name=animated-3d-portfolio, containerState=COMPONENT_CREATED, componentStore=D:\Projects\animated-3d-portfolio): scope was not completed in 10s.
+
+- "ProjectImpl@436998643 container":supervisor:ChildScope{Cancelling}
+	- "com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.AdvertiserInfoUpdateService":supervisor:ChildScope{Cancelling}
+		- "com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.AdvertiserInfoUpdateService":StandaloneCoroutine{Cancelling}, state: RUNNING [Dispatchers.Default]
+			at java.base@17.0.9/sun.nio.ch.Net.poll(Native Method)
+			at java.base@17.0.9/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:186)
+			at java.base@17.0.9/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:290)
+			at java.base@17.0.9/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+			at java.base@17.0.9/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+			at java.base@17.0.9/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+			at java.base@17.0.9/java.net.Socket$SocketInputStream.read(Socket.java:966)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+			at java.base@17.0.9/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1510)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1425)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+			at java.base@17.0.9/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+			at java.base@17.0.9/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:589)
+			at java.base@17.0.9/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+			at java.base@17.0.9/sun.net.www.protocol.http.HttpURLConnection.followRedirect0(HttpURLConnection.java:2922)
+			at java.base@17.0.9/sun.net.www.protocol.http.HttpURLConnection.followRedirect(HttpURLConnection.java:2831)
+			at java.base@17.0.9/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1927)
+			at java.base@17.0.9/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+			at java.base@17.0.9/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+			at java.base@17.0.9/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:308)
+			at com.intellij.util.io.HttpRequests.openConnection(HttpRequests.java:619)
+			at com.intellij.util.io.HttpRequests$RequestImpl.getConnection(HttpRequests.java:361)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile$lambda$8(MarketplaceRequests.kt:185)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion$$Lambda$4427/0x0000000801ea6528.process(Unknown Source)
+			at com.intellij.util.io.HttpRequests.doProcess(HttpRequests.java:524)
+			at com.intellij.util.io.HttpRequests.process(HttpRequests.java:506)
+			at com.intellij.util.io.HttpRequests$RequestBuilderImpl.connect(HttpRequests.java:335)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests$Companion.readOrUpdateFile(MarketplaceRequests.kt:182)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests.loadJetBrainsMarketplacePlugins(MarketplaceRequests.kt:553)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests.loadJetBrainsMarketplacePlugins$default(MarketplaceRequests.kt:551)
+			at com.intellij.ide.plugins.marketplace.MarketplaceRequests$updatePluginIdsAndExtensionData$2.invokeSuspend(MarketplaceRequests.kt:568)
+			at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.AdvertiserInfoUpdateService$scheduleAdvertiserUpdate$1.invokeSuspend(PluginAdvertiserEditorNotificationProvider.kt:303)
+		- "com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.AdvertiserInfoUpdateService":StandaloneCoroutine{Cancelling}, state: SUSPENDED [Dispatchers.Default]
+			at com.intellij.openapi.updateSettings.impl.pluginsAdvertisement.AdvertiserInfoUpdateService$scheduleAdvertiserUpdate$1.invokeSuspend(PluginAdvertiserEditorNotificationProvider.kt:303)
+
+2024-05-20 21:14:05,597 [ 121017]   WARN - org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint - Unsupported notification method: @/tailwindCSS/projectsDestroyed
+Initialize JCEF context with sandbox=000001B4347A6C70
