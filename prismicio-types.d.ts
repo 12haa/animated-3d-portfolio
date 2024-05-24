@@ -335,14 +335,14 @@ export interface BiographySliceDefaultPrimary {
   buttontext: prismic.KeyTextField;
 
   /**
-   * ButtonLink field in *Biography → Default → Primary*
+   * Button Link field in *Biography → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: biography.default.primary.buttonlink
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: biography.default.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  buttonlink: prismic.KeyTextField;
+  button_link: prismic.LinkField;
 
   /**
    * Avatar field in *Biography → Default → Primary*

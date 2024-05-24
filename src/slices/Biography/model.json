@@ -35,11 +35,12 @@
             "placeholder": ""
           }
         },
-        "buttonlink": {
-          "type": "Text",
+        "button_link": {
+          "type": "Link",
           "config": {
-            "label": "ButtonLink",
-            "placeholder": ""
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null
           }
         },
         "avatar": {
