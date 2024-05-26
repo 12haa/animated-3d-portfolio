@@ -50,33 +50,33 @@ const Avatar = ({ image, className }: AvatarProps) => {
           .to(
             ".avatar",
             {
-              rotation: gsap.utils.clamp(-2, 2, 5 * componentPercent.x),
-              duration: 0.5,
+              rotation: gsap.utils.clamp(-10, 20, 2 * componentPercent.x),
+              duration: 1.5,
             },
             0,
           )
           .to(
             "highlight",
             {
-              opacity: distFromCenter - 0.7,
-              x: -10 + 20 * componentPercent.x,
+              opacity: distFromCenter - 1.7,
+              x: (-10 + 20) & componentPercent.x,
               duration: 0.5,
             },
             0,
           );
       };
-    });
+    }, component);
   }, []);
 
   return (
     <div ref={component} className={clsx("relative h-full w-full", className)}>
-      <div className="avatar overflow-hidden rounded-3xl border-2 border-slate-700 opacity-00">
+      <div className="avatar overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0">
         <PrismicNextImage
           field={image}
           imgixParams={{ q: 90 }}
           className="avatar-image h-full w-full object-fill"
         />
-        <div className="highlight absolute inset-0 w-full hidden scale-110 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 md:block"></div>
+        <div className="highlight absolute hidden inset-0 w-full scale-100 bg-gradient-to-tr from-transparent via-white to-transparent opacity-0 md:block"></div>
       </div>
     </div>
   );
