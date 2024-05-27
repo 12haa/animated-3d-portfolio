@@ -26,6 +26,15 @@
           "placeholder": ""
         }
       },
+      "project_link": {
+        "type": "Link",
+        "config": {
+          "label": "Project Link",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
       "hover_image": {
         "type": "Image",
         "config": {

@@ -44,6 +44,17 @@ interface BlogPostDocumentData {
   hover_image: prismic.ImageField<never>;
 
   /**
+   * Project Link field in *Blog Post*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.project_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  project_link: prismic.LinkField;
+
+  /**
    * Slice Zone field in *Blog Post*
    *
    * - **Field Type**: Slice Zone
@@ -258,6 +269,17 @@ interface ProjectDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#date
    */
   date: prismic.DateField;
+
+  /**
+   * Project Link field in *Project*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project.project_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  project_link: prismic.LinkField;
 
   /**
    * Hover Image field in *Project*

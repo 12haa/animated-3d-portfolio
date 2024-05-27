@@ -85,21 +85,21 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       data-slice-variation={slice.variation}
       ref={component}
     >
-      <div className="grid grid-cols-1 items-center min-h-[70vh] md:grid-cols-2">
+      <div className="grid grid-cols-1 items-center min-h-[70vh] md:grid-cols-2 ">
         <Shapes />
         <div className="col-start-1 md:row-start-1">
           <h1
-            className="mb-8 text-[clamp(3rem,9vmin,5rem)] font-extrabold  leading-none tracking-tighter  "
+            className="mb-8 text-[clamp(4rem,9vmin,4rem)]   font-extrabold  leading-none tracking-tighter  "
             aria-label={slice.primary.firstname + " " + slice.primary.lastname}
           >
-            <span className="block text-slate-300 text-[80px]">
+            <span className="block text-slate-300 text-[100px]">
               {renderLetters(slice.primary.firstname, "first")}
             </span>
             <span className="block text-slate-500 -mt-[.2em]">
               {renderLetters(slice.primary.lastname, "last")}
             </span>
           </h1>
-          <span className="block bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-300 bg-clip-text text-center text-2xl font-bold uppercase text-transparent  opacity-100 job-title tracking-[0.2em] md:text-4xl">
+          <span className=" bg-gradient-to-tr from-yellow-500 via-yellow-200 to-yellow-300 bg-clip-text text-center text-2xl font-bold uppercase text-transparent  opacity-100 job-title tracking-[0.2em] md:text-4xl">
             {slice.primary.tag_line}
           </span>
         </div>

@@ -13,18 +13,21 @@ type ContentListProps = {
   contentType: Content.ContentIndexSlice["primary"]["content_type"];
   fallbackItemImage: Content.ContentIndexSlice["primary"]["fallback_item_image"];
   viewMoreText: Content.ContentIndexSlice["primary"]["view_more_text"];
+  projectLink: string;
 };
 const ContentList = ({
   items,
   contentType,
   fallbackItemImage,
   viewMoreText = "Read More",
+  projectLink,
 }: ContentListProps) => {
   const component = useRef(null);
   const revealRef = useRef(null);
   const [currentItem, setCurrentItem] = useState<null | number>(null);
   const itemsRef = useRef<Array<HTMLLIElement | null>>([]);
 
+  // console.log(items, "IM Items");
   const contentImages = items.map((item) => {
     const image = isFilled.image(item.data.hover_image)
       ? item.data.hover_image
@@ -71,7 +74,8 @@ const ContentList = ({
           },
         );
       });
-    });
+      return () => ctx.revert();
+    }, component);
   }, []);
 
   useEffect(() => {
@@ -112,7 +116,16 @@ const ContentList = ({
     };
   }, [currentItem]);
 
+  useEffect(() => {
+    contentImages.forEach((url) => {
+      if (!url) return;
+      const img = new Image();
+      img.src = url;
+    });
+  }, [contentImages]);
+
   const urlPreFix = contentType === "Blog" ? "/blog" : "/project";
+
   return (
     <div ref={component}>
       <ul
@@ -129,7 +142,7 @@ const ContentList = ({
                 ref={(e) => (itemsRef.current[index] = e)}
               >
                 <Link
-                  href={urlPreFix + "/" + item.uid}
+                  href={projectLink}
                   className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
                   aria-label={item.data.title}
                 >

@@ -34,6 +34,14 @@
           "thumbnails": []
         }
       },
+      "project_link": {
+        "type": "Link",
+        "config": {
+          "label": "Project Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
