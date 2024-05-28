@@ -139,7 +139,7 @@ const ContentList = ({
                 key={index}
                 className="list-item opacity-0"
                 onMouseEnter={() => onMouseEnter(index)}
-                ref={(e: any) => (itemsRef.current[index] = e)}
+                ref={(e) => (itemsRef.current[index] = e)}
               >
                 <Link
                   href={projectLink}
