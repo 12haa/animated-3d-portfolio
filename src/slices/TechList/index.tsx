@@ -52,6 +52,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       ref={component}
+      className="overflow-hidden"
     >
       <Bounded as="div">
         <Heading size="xl" className="mb-8" as="h2">
@@ -61,7 +62,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
       {slice.items.map(({ tech_name, tech_color }, index) => (
         <div
           key={index}
-          className="tech-row mb-8 flex items-center justify-center text-slate-700 gap-4"
+          className="tech-row mb-8 flex items-center justify-center text-slate-700 gap-4 "
           aria-label={tech_name || undefined}
         >
           {Array.from({ length: 15 }, (_, index) => (
